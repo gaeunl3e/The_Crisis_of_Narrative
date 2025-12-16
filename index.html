@@ -1,456 +1,449 @@
-{\rtf1\ansi\ansicpg949\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Image Icons Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-\f0\fs24 \cf0 ]<!DOCTYPE html>\
-<html lang="ko">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>All Image Icons Design</title>\
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\
-    <style>\
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');\
-\
-        * \{\
-            box-sizing: border-box;\
-            margin: 0;\
-            padding: 0;\
-        \}\
-\
-        body \{\
-            display: flex;\
-            justify-content: center;\
-            align-items: flex-start; \
-            min-height: 100vh;\
-            background-color: #111; \
-            font-family: 'Inter', sans-serif;\
-            overflow-y: auto; \
-            padding-top: 50px; \
-        \}\
-\
-        /* \uc0\u54256  \u54532 \u47112 \u51076  */\
-        .phone-frame \{\
-            width: 90vw; \
-            max-width: 1000px;\
-            min-height: 80vh; \
-            background-color: #000;\
-            \
-            border-top-left-radius: 90px; \
-            border-top-right-radius: 90px;\
-            border-bottom-left-radius: 0; \
-            border-bottom-right-radius: 0;\
-            \
-            border: 18px solid #222;\
-            border-bottom: none; \
-            \
-            position: relative;\
-            box-shadow: 0 0 80px rgba(0,0,0,0.8);\
-            padding: 90px 50px 100px 50px; \
-            z-index: 1;\
-        \}\
-\
-        /* \uc0\u45432 \u52824  */\
-        .notch \{\
-            position: absolute;\
-            top: -1px; \
-            left: 50%;\
-            transform: translateX(-50%);\
-            width: 50%; \
-            max-width: 500px;\
-            height: 60px;\
-            background-color: #222;\
-            border-bottom-left-radius: 35px;\
-            border-bottom-right-radius: 35px;\
-            z-index: 200; \
-        \}\
-\
-        /* \uc0\u49345 \u53468 \u48148  */\
-        .status-bar \{\
-            display: flex;\
-            justify-content: space-between;\
-            padding: 0 15px;\
-            font-size: 26px;\
-            font-weight: 600;\
-            color: white;\
-            margin-bottom: 50px;\
-        \}\
-\
-        /* --- [\uc0\u49688 \u51221 \u46120 ] \u50508 \u47548  \u48176 \u45320  \u49828 \u53440 \u51068  (\u49324 \u51060 \u51592  \u54869 \u45824 ) --- */\
-        .notification-popup \{\
-            position: absolute;\
-            top: 75px; /* \uc0\u45432 \u52824  \u50500 \u47000  */\
-            left: 50%;\
-            transform: translateX(-50%) translateY(-150%);\
-            width: 94%; /* \uc0\u45320 \u48708  \u51613 \u44032  */\
-            max-width: 580px;\
-            \
-            /* \uc0\u50976 \u47532  \u51656 \u44048  */\
-            background: rgba(230, 230, 230, 0.85); /* \uc0\u44032 \u46021 \u49457 \u51012  \u50948 \u54644  \u53804 \u47749 \u46020  \u49332 \u51677  \u45230 \u52644  */\
-            backdrop-filter: blur(25px);\
-            -webkit-backdrop-filter: blur(25px);\
-            \
-            border-radius: 26px; /* \uc0\u46181 \u44544 \u44592  \u51613 \u44032  */\
-            padding: 22px 25px; /* \uc0\u54056 \u46377  \u51613 \u44032  (\u45236 \u48512  \u44277 \u44036  \u54869 \u48372 ) */\
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);\
-            z-index: 150;\
-            \
-            display: flex;\
-            flex-direction: column;\
-            gap: 10px;\
-            \
-            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);\
-            opacity: 0;\
-            pointer-events: none;\
-            text-decoration: none; /* \uc0\u47553 \u53356  \u48145 \u51460  \u51228 \u44144  */\
-        \}\
-\
-        .notification-popup.active \{\
-            transform: translateX(-50%) translateY(0);\
-            opacity: 1;\
-            pointer-events: auto;\
-        \}\
-\
-        /* \uc0\u54756 \u45908  (\u50500 \u51060 \u53080  + \u51060 \u47492  + \u49884 \u44036 ) */\
-        .noti-header \{\
-            display: flex;\
-            justify-content: space-between;\
-            align-items: center;\
-        \}\
-\
-        .noti-app-info \{\
-            display: flex;\
-            align-items: center;\
-            gap: 12px; /* \uc0\u44036 \u44201  \u51613 \u44032  */\
-        \}\
-\
-        .noti-icon \{\
-            width: 36px; /* \uc0\u50500 \u51060 \u53080  \u53356 \u44592  \u45824 \u54253  \u54869 \u45824  (\u44592 \u51316  24px) */\
-            height: 36px;\
-            border-radius: 8px;\
-            object-fit: cover;\
-            background-color: #fff;\
-        \}\
-\
-        .noti-app-name \{\
-            font-size: 16px; /* \uc0\u54256 \u53944  \u54869 \u45824  */\
-            font-weight: 700;\
-            color: #222;\
-            letter-spacing: 0.5px;\
-            text-transform: uppercase;\
-        \}\
-\
-        .noti-time \{\
-            font-size: 14px;\
-            color: #666;\
-        \}\
-\
-        /* \uc0\u45236 \u50857  */\
-        .noti-content \{\
-            font-size: 17px; /* \uc0\u48376 \u47928  \u54256 \u53944  \u54869 \u45824  */\
-            color: #111;\
-            line-height: 1.5;\
-            display: -webkit-box;\
-            -webkit-line-clamp: 2;\
-            -webkit-box-orient: vertical;\
-            overflow: hidden;\
-            padding-left: 2px;\
-        \}\
-\
-        .noti-content strong \{\
-            font-weight: 700;\
-        \}\
-        \
-        .noti-footer \{\
-            font-size: 13px;\
-            color: #777;\
-            margin-top: 4px;\
-        \}\
-        /* --------------------------- */\
-\
-\
-        /* \uc0\u44536 \u47532 \u46300  */\
-        .app-grid \{\
-            display: grid;\
-            grid-template-columns: repeat(4, 1fr);\
-            gap: 40px; \
-        \}\
-\
-        /* \uc0\u50500 \u51060 \u53596  \u44277 \u53685  */\
-        .app-item \{\
-            display: flex;\
-            flex-direction: column;\
-            align-items: center;\
-            text-decoration: none;\
-            color: white;\
-            position: relative;\
-            cursor: pointer; \
-        \}\
-\
-        /* \uc0\u50500 \u51060 \u53080  \u48149 \u49828  */\
-        .app-icon \{\
-            width: 100%;\
-            aspect-ratio: 1/1;\
-            border-radius: 25%; \
-            margin-bottom: 18px;\
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);\
-            position: relative;\
-            background-color: #333; \
-            overflow: hidden; \
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);\
-        \}\
-\
-        .app-item:hover .app-icon \{\
-            transform: scale(1.05);\
-            z-index: 20;\
-        \}\
-\
-        /* \uc0\u54532 \u47196 \u51229 \u53944  \u47553 \u53356  \u50500 \u51060 \u53080  \u54840 \u48260  \u49884  \u50808 \u48512  \u46972 \u51060 \u53944  \u54952 \u44284  */\
-        .app-item.project-link:hover .app-icon \{\
-            box-shadow: \
-                0 10px 25px rgba(0,0,0,0.4), \
-                0 0 10px 10px rgba(255, 255, 255, 0.4); \
-            border: 2px solid rgba(255, 255, 255, 0.2);\
-        \}\
-      \
-        /* \uc0\u51060 \u48120 \u51648  \u49828 \u53440 \u51068  */\
-        .app-icon img \{\
-            width: 100%;\
-            height: 100%;\
-            object-fit: cover; \
-            display: block;\
-        \}\
-\
-        .app-name \{\
-            font-size: 1.3rem;\
-            color: #fff;\
-            text-align: center;\
-            font-weight: 500;\
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);\
-        \}\
-\
-        /* --- \uc0\u49444 \u47749 \u52285  (Tooltip) --- */\
-        .info-card \{\
-            position: absolute;\
-            top: 115%; \
-            left: 50%;\
-            width: 360px;\
-            transform: translateX(-50%) translateY(20px);\
-            \
-            background: rgba(255, 255, 255, 0.92);\
-            backdrop-filter: blur(25px);\
-            padding: 30px;\
-            border-radius: 26px;\
-            \
-            opacity: 0;\
-            visibility: hidden;\
-            pointer-events: none;\
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);\
-            z-index: 9999;\
-            box-shadow: 0 25px 70px rgba(0,0,0,0.7);\
-        \}\
-\
-        .app-item:nth-child(4n+1) .info-card \{ left: 0; transform: translateX(0) translateY(20px); \}\
-        .app-item:nth-child(4n) .info-card \{ left: auto; right: 0; transform: translateX(0) translateY(20px); \}\
-\
-        .app-item.project-link:hover .info-card \{\
-            opacity: 1;\
-            visibility: visible;\
-            transform: translateX(-50%) translateY(0);\
-        \}\
-        .app-item:nth-child(4n+1).project-link:hover .info-card \{ transform: translateX(0) translateY(0); \}\
-        .app-item:nth-child(4n).project-link:hover .info-card \{ transform: translateX(0) translateY(0); \}\
-\
-        /* Project 3 \uc0\u51204 \u50857  \u50948 \u52824  */\
-        .app-item.item-p3 .info-card \{\
-            top: 50%; bottom: auto; left: auto; right: 115%;\
-            transform: translateY(-50%) translateX(20px); \
-        \}\
-        .app-item.item-p3:hover .info-card \{\
-            transform: translateY(-50%) translateX(0); \
-        \}\
-\
-        .info-card h3 \{ font-size: 24px; margin-bottom: 6px; color: #000; font-weight: 700;\}\
-        .info-card .creator \{ font-size: 15px; color: #666; margin-bottom: 15px; display: block; font-weight: 500; \}\
-        .info-card p \{ font-size: 16px; line-height: 1.6; color: #333; word-break: keep-all;\}\
-\
-    </style>\
-</head>\
-<body>\
-\
-    <div class="phone-frame">\
-        <div class="notch"></div>\
-\
-        <div class="status-bar">\
-            <span>00:00</span>\
-            <div class="status-icons">\
-                <i class="fas fa-signal"></i>\
-                <i class="fas fa-wifi"></i>\
-                <i class="fas fa-battery-full"></i>\
-            </div>\
-        </div>\
-\
-        <a href="#" target="_blank" class="notification-popup" id="notiPopup">\
-            <div class="noti-header">\
-                <div class="noti-app-info">\
-                    <img src="" alt="App Icon" class="noti-icon" id="notiIcon">\
-                    <span class="noti-app-name" id="notiAppName">APP NAME</span>\
-                </div>\
-                <span class="noti-time">\uc0\u51648 \u44552 </span>\
-            </div>\
-            <div class="noti-content" id="notiText">\
-                </div>\
-            <div class="noti-footer">\
-                \uc0\u45580 \u47084 \u49436  \u54869 \u51064 \u54616 \u44592 \
-            </div>\
-        </a>\
-        <div class="app-grid">\
-            \
-            <a href="https://save-nova-25861292.figma.site/" class="app-item project-link">\
-                <div class="app-icon">\
-                    <img src="https://i.imgur.com/pnPw7F1.png" alt="P1">\
-                </div>\
-                <span class="app-name">NO NARRATIVE</span>\
-                \
-                <div class="info-card">\
-                    <h3>NO NARRATIVE</h3>\
-                    <span class="creator">Created by \uc0\u44608 \u48124 \u51648 </span>\
-                    <p>\uc0\u51060  \u44275 \u51008  @rich_kim_hustler\u51032  \u44277 \u44036 \u51077 \u45768 \u45796 . \u44536 \u45716  \u49457 \u44277 \u54620  \u49324 \u50629 \u44032 \u51060 \u51088 , \u44264 \u54140 \u51060 \u47728 , \u48120 \u49885 \u44032 \u51077 \u45768 \u45796 . \u54616 \u51648 \u47564  \u44536 \u51032  \u49334 \u50640 \u45716  '\u44284 \u51221 '\u51060  \u50630 \u49845 \u45768 \u45796 . \u50724 \u51649  '\u44208 \u44284 '\u47196  \u48372 \u50668 \u51648 \u45716  \u52272 \u45208 \u51032  \u49692 \u44036 (Point)\u46308 \u47564  \u51316 \u51116 \u54633 \u45768 \u45796 .\
-                       \uc0\u53364 \u47533 \u54644 \u48372 \u49464 \u50836 . \u51339 \u50500 \u50836 \u50752  \u54644 \u49884 \u53468 \u44536  \u46244 \u50640  \u44032 \u47140 \u51652  \u47589 \u46973  \u50630 \u45716  \u54788 \u49892 \u51012 , \u49436 \u49324 \u44032  \u51228 \u44144 \u46108  \u49334 \u51060  \u50620 \u47560 \u45208  \u44277 \u54728 \u54616 \u44172  \u51204 \u49884 \u46112  \u49688  \u51080 \u45716 \u51648 , \u51060  \u46356 \u51648 \u53560  \u44749 \u45936 \u44592 \u47484  \u53685 \u54644  \u47785 \u44201 \u54644 \u48372 \u49464 \u50836  </p>\
-                </div>\
-            </a>\
-\
-            <div class="app-item">\
-                <div class="app-icon">\
-                    <img src="https://www.apple.com/v/os/e/images/macos/more/icon_messages__c75oi8dpw4gi_large_2x.png" alt="Calendar">\
-                </div>\
-                <span class="app-name">Messeges</span>\
-            </div>\
-\
-            <div class="app-item">\
-                <div class="app-icon">\
-                    <img src="https://www.apple.com/v/os/c/images/shared/more/icon_photos__c1mo1v0dm1ci_large_2x.png" alt="Photos">\
-                </div>\
-                <span class="app-name">Photos</span>\
-            </div>\
-\
-            <a href="https://output.jsbin.com/sibohim" class="app-item project-link">\
-                <div class="app-icon">\
-                    <img src="https://i.imgur.com/J4A4VUW.png" alt="P2">\
-                </div>\
-                <span class="app-name">Story Selling</span>\
-\
-                <div class="info-card">\
-                    <h3>Story Selling</h3>\
-                    <span class="creator">Created by \uc0\u52292 \u54788 </span>\
-                    <p>\uc0\u51060  \u49324 \u51060 \u53944 \u45716  \u48708 \u54217 \u44032  \u54620 \u48337 \u52384 \u51032  \u49436 \u49324 \u51032  \u50948 \u44592 \u50640 \u49436  \u52636 \u48156 \u54620  \u49892 \u54744 \u51201  \u50937  \u50500 \u53944 \u50892 \u53356 \u51077 \u45768 \u45796 . \u51088 \u48376 \u51452 \u51032 \u51201  \u49828 \u53664 \u47532 \u53588 \u47553 \u51060  \u49334 \u51012  \u49345 \u54408 \u54868 \u54616 \u44256 , \u50864 \u47532 \u47484  \u48520 \u50504 \u44284  \u44277 \u54728  \u49549 \u51004 \u47196  \u48128 \u50612  \u45347 \u45716  \u44284 \u51221 \u51012  \u51687 \u51008  \u47928 \u51109 \u46308 \u47196  \u54644 \u52404 \u54644  \u48372 \u50668 \u51469 \u45768 \u45796 .\
-                       \uc0\u51060  \u44277 \u44036 \u51032  \u47785 \u51201 \u51008  \u53364 \u47533 \u51012  \u51600 \u44592 \u44172  \u54616 \u45716  \u44163 \u51060  \u50500 \u45768 \u46972 , \u45149 \u50630 \u45716  \u51221 \u48372  \u50629 \u45936 \u51060 \u53944  \u49549 \u50640 \u49436  \u50780  \u51221 \u51089  \u51088 \u49888 \u51032  \u51060 \u50556 \u44592 \u50640  \u44480  \u44592 \u50872 \u51060 \u51648  \u47803 \u54616 \u45716 \u51648  \u49828 \u49828 \u47196  \u51656 \u47928 \u54616 \u44172  \u47564 \u46300 \u45716  \u45936  \u51080 \u49845 \u45768 \u45796 .</p>\
-                </div>\
-            </a>\
-\
-            <div class="app-item">\
-                <div class="app-icon">\
-                    <img src="https://www.apple.com/v/os/e/images/shared/more/icon_notes__b48ojk6xh7py_large_2x.png" alt="Mail">\
-                </div>\
-                <span class="app-name">Notes</span>\
-            </div>\
-\
-            <div class="app-item">\
-                <div class="app-icon">\
-                    <img src="https://www.apple.com/v/os/c/images/ios/more/icon_clock__c06enhzvmyie_large_2x.png" alt="Clock">\
-                </div>\
-                <span class="app-name">Clock</span>\
-            </div>\
-\
-            <a href="https://gaeunl3e.github.io/The_Lost_Story/" class="app-item project-link item-p3" target="_blank">\
-                <div class="app-icon">\
-                    <img src="https://i.ibb.co/0V9sgGLv/Group-53.png" alt="P3">\
-                </div>\
-                <span class="app-name">\uc0\u49324 \u46972 \u51652  \u49828 \u53664 \u47532 </span>\
-\
-                <div class="info-card">\
-                    <h3>\uc0\u49324 \u46972 \u51652  \u49828 \u53664 \u47532 </h3>\
-                    <span class="creator">Created by \uc0\u51060 \u44032 \u51008 </span>\
-                    <p>\uc0\u51060  \u50937  \u51089 \u50629 \u51008  \u48520 \u52828 \u51208 \u54620  UI\u50752  \u47924 \u51032 \u48120 \u54620  \u51064 \u53552 \u47001 \u49496 \u51012  \u53685 \u54644 , \u49436 \u49324  \u50630 \u51060  \u49548 \u48708 \u46104 \u44256  \u49324 \u46972 \u51648 \u45716  SNS \u49828 \u53664 \u47532 \u51032  \u44277 \u54728 \u54632 \u51012  \u49324 \u50857 \u51088 \u44032  \u51649 \u51217  \u52404 \u44048 \u54616 \u44172  \u54620 \u45796 .\
-                    \uc0\u51089 \u46041 \u54616 \u51648  \u50506 \u45716  \u48260 \u53948 \u44284  \u55064 \u48156 \u46104 \u45716  \u51060 \u48120 \u51648 \'b7\u53581 \u49828 \u53944 \u45716  SNS\u44032  \u49436 \u49324 \u44032  \u50500 \u45772  \u51221 \u48372  \u51204 \u49884 \u47196  \u48320 \u51656 \u46108  \u54788 \u49892 \u51012  \u48708 \u54032 \u54616 \u47728 , \u51075 \u50612 \u48260 \u47536  \u44060 \u51064 \u51032  \u51060 \u50556 \u44592 \u47484  \u46104 \u47931 \u44172  \u54620 \u45796 .\
-                    </p>\
-                </div>\
-            </a>\
-\
-            <div class="app-item">\
-                <div class="app-icon">\
-                    <img src="https://www.apple.com/v/os/e/images/macos/more/icon_facetime__feotyd7la8i2_large_2x.png" alt="Weather">\
-                </div>\
-                <span class="app-name">FaceTime</span>\
-            </div>\
-\
-        </div> \
-    </div>\
-\
-    <script>\
-        const notiPopup = document.getElementById('notiPopup');\
-        const notiIcon = document.getElementById('notiIcon');\
-        const notiAppName = document.getElementById('notiAppName');\
-        const notiText = document.getElementById('notiText');\
-        \
-        // 1. \uc0\u47004 \u45924  \u50500 \u51060 \u46356  \u47785 \u47197 \
-        const randomIds = [\
-            "narrative_void", "lost_signal_99", "empty_shell", \
-            "digital_ghost", "no_context_life", "hyper_real_00", \
-            "user_deleted", "unknown_story", "broken_link"\
-        ];\
-\
-        // 2. \uc0\u50508 \u47548  \u52636 \u52376  \u45936 \u51060 \u53552  (3\u44032 \u51648  \u52992 \u51060 \u49828 )\
-        const sources = [\
-            \{\
-                name: "\uc0\u49324 \u46972 \u51652  \u49828 \u53664 \u47532 ",\
-                icon: "https://i.ibb.co/0V9sgGLv/Group-53.png",\
-                msgTemplate: "\uc0\u45784 \u51060  \u49828 \u53664 \u47532 \u47484  \u50732 \u47160 \u49845 \u45768 \u45796 .",\
-                link: "https://gaeunl3e.github.io/The_Lost_Story/"\
-            \},\
-            \{\
-                name: "NO NARRATIVE",\
-                icon: "https://i.imgur.com/pnPw7F1.png",\
-                msgTemplate: "\uc0\u45784 \u51060  \u54924 \u50896 \u45784 \u51012  \u54036 \u47196 \u50864 \u54616 \u44592  \u49884 \u51089 \u54664 \u49845 \u45768 \u45796 .",\
-                link: "https://save-nova-25861292.figma.site/"\
-            \},\
-            \{\
-                name: "Story Selling",\
-                icon: "https://i.imgur.com/J4A4VUW.png",\
-                msgTemplate: "\uc0\u45784 \u51060  \u54924 \u50896 \u45784 \u51032  \u44172 \u49884 \u47932 \u51012  \u51339 \u50500 \u54633 \u45768 \u45796 .",\
-                link: "https://output.jsbin.com/sibohim"\
-            \}\
-        ];\
-\
-        function showNotification() \{\
-            // \uc0\u47004 \u45924  \u50836 \u49548  \u49440 \u53469 \
-            const randomId = randomIds[Math.floor(Math.random() * randomIds.length)];\
-            const randomSource = sources[Math.floor(Math.random() * sources.length)];\
-            \
-            // UI \uc0\u50629 \u45936 \u51060 \u53944 \
-            notiIcon.src = randomSource.icon;\
-            notiAppName.innerText = randomSource.name;\
-            notiText.innerHTML = `<strong>$\{randomId\}</strong>$\{randomSource.msgTemplate\}`;\
-            notiPopup.href = randomSource.link; // \uc0\u47553 \u53356  \u48320 \u44221 \
-            \
-            // \uc0\u50528 \u45768 \u47700 \u51060 \u49496  \u49892 \u54665 \
-            notiPopup.classList.add('active');\
-\
-            // 4\uc0\u52488  \u54980  \u49704 \u44608 \
-            setTimeout(() => \{\
-                notiPopup.classList.remove('active');\
-            \}, 4000);\
-        \}\
-\
-        // \uc0\u52488 \u44592  \u49892 \u54665  (3\u52488  \u46244 )\
-        setTimeout(showNotification, 3000);\
-\
-        // 20\uc0\u52488  \u51452 \u44592  \u48152 \u48373 \
-        setInterval(showNotification, 10000);\
-    </script>\
-\
-</body>\
-</html>}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            min-height: 100vh;
+            background-color: #111; 
+            font-family: 'Inter', sans-serif;
+            overflow-y: auto; 
+            padding-top: 50px; 
+        }
+
+        
+        .phone-frame {
+            width: 90vw; 
+            max-width: 1000px;
+            min-height: 80vh; 
+            background-color: #000;
+            
+            border-top-left-radius: 90px; 
+            border-top-right-radius: 90px;
+            border-bottom-left-radius: 0; 
+            border-bottom-right-radius: 0;
+            
+            border: 18px solid #222;
+            border-bottom: none; 
+            
+            position: relative;
+            box-shadow: 0 0 80px rgba(0,0,0,0.8);
+            padding: 90px 50px 100px 50px; 
+            z-index: 1;
+        }
+
+        
+        .notch {
+            position: absolute;
+            top: -1px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%; 
+            max-width: 500px;
+            height: 60px;
+            background-color: #222;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            z-index: 200; 
+        }
+
+        
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px;
+            font-size: 26px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        
+        .notification-popup {
+            position: absolute;
+            top: 75px; 
+            left: 50%;
+            transform: translateX(-50%) translateY(-150%);
+            width: 94%; 
+            max-width: 580px;
+            
+            
+            background: rgba(230, 230, 230, 0.85); 
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            
+            border-radius: 26px; 
+            padding: 22px 25px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            z-index: 150;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            pointer-events: none;
+            text-decoration: none; 
+        }
+
+        .notification-popup.active {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        
+        .noti-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .noti-app-info {
+            display: flex;
+            align-items: center;
+            gap: 12px; 
+        }
+
+        .noti-icon {
+            width: 36px; 
+            height: 36px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #fff;
+        }
+
+        .noti-app-name {
+            font-size: 16px; 
+            font-weight: 700;
+            color: #222;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .noti-time {
+            font-size: 14px;
+            color: #666;
+        }
+
+        
+        .noti-content {
+            font-size: 17px; 
+            color: #111;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            padding-left: 2px;
+        }
+
+        .noti-content strong {
+            font-weight: 700;
+        }
+        
+        .noti-footer {
+            font-size: 13px;
+            color: #777;
+            margin-top: 4px;
+        }
+        
+
+
+        
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px; 
+        }
+
+        
+        .app-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            cursor: pointer; 
+        }
+
+        
+        .app-icon {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 25%; 
+            margin-bottom: 18px;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            background-color: #333; 
+            overflow: hidden; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .app-item:hover .app-icon {
+            transform: scale(1.05);
+            z-index: 20;
+        }
+
+        
+        .app-item.project-link:hover .app-icon {
+            box-shadow: 
+                0 10px 25px rgba(0,0,0,0.4), 
+                0 0 10px 10px rgba(255, 255, 255, 0.4); 
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+      
+        
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .app-name {
+            font-size: 1.3rem;
+            color: #fff;
+            text-align: center;
+            font-weight: 500;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        
+        .info-card {
+            position: absolute;
+            top: 115%; 
+            left: 50%;
+            width: 360px;
+            transform: translateX(-50%) translateY(20px);
+            
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(25px);
+            padding: 30px;
+            border-radius: 26px;
+            
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 9999;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+        }
+
+        .app-item:nth-child(4n+1) .info-card { left: 0; transform: translateX(0) translateY(20px); }
+        .app-item:nth-child(4n) .info-card { left: auto; right: 0; transform: translateX(0) translateY(20px); }
+
+        .app-item.project-link:hover .info-card {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+        .app-item:nth-child(4n+1).project-link:hover .info-card { transform: translateX(0) translateY(0); }
+        .app-item:nth-child(4n).project-link:hover .info-card { transform: translateX(0) translateY(0); }
+
+        
+        .app-item.item-p3 .info-card {
+            top: 50%; bottom: auto; left: auto; right: 115%;
+            transform: translateY(-50%) translateX(20px); 
+        }
+        .app-item.item-p3:hover .info-card {
+            transform: translateY(-50%) translateX(0); 
+        }
+
+        .info-card h3 { font-size: 24px; margin-bottom: 6px; color: #000; font-weight: 700;}
+        .info-card .creator { font-size: 15px; color: #666; margin-bottom: 15px; display: block; font-weight: 500; }
+        .info-card p { font-size: 16px; line-height: 1.6; color: #333; word-break: keep-all;}
+
+    </style>
+</head>
+<body>
+
+    <div class="phone-frame">
+        <div class="notch"></div>
+
+        <div class="status-bar">
+            <span>00:00</span>
+            <div class="status-icons">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <a href="#" target="_blank" class="notification-popup" id="notiPopup">
+            <div class="noti-header">
+                <div class="noti-app-info">
+                    <img src="" alt="App Icon" class="noti-icon" id="notiIcon">
+                    <span class="noti-app-name" id="notiAppName">APP NAME</span>
+                </div>
+                <span class="noti-time">지금</span>
+            </div>
+            <div class="noti-content" id="notiText">
+                </div>
+            <div class="noti-footer">
+                눌러서 확인하기
+            </div>
+        </a>
+        <div class="app-grid">
+            
+            <a href="https://save-nova-25861292.figma.site/" class="app-item project-link">
+                <div class="app-icon">
+                    <img src="https://i.imgur.com/pnPw7F1.png" alt="P1">
+                </div>
+                <span class="app-name">NO NARRATIVE</span>
+                
+                <div class="info-card">
+                    <h3>NO NARRATIVE</h3>
+                    <span class="creator">Created by 김민지</span>
+                    <p>이 곳은 @rich_kim_hustler의 공간입니다. 그는 성공한 사업가이자, 골퍼이며, 미식가입니다. 하지만 그의 삶에는 '과정'이 없습니다. 오직 '결과'로 보여지는 찰나의 순간(Point)들만 존재합니다.
+                       클릭해보세요. 좋아요와 해시태그 뒤에 가려진 맥락 없는 현실을, 서사가 제거된 삶이 얼마나 공허하게 전시될 수 있는지, 이 디지털 껍데기를 통해 목격해보세요 </p>
+                </div>
+            </a>
+
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="https://www.apple.com/v/os/e/images/macos/more/icon_messages__c75oi8dpw4gi_large_2x.png" alt="Calendar">
+                </div>
+                <span class="app-name">Messeges</span>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="https://www.apple.com/v/os/c/images/shared/more/icon_photos__c1mo1v0dm1ci_large_2x.png" alt="Photos">
+                </div>
+                <span class="app-name">Photos</span>
+            </div>
+
+            <a href="https://output.jsbin.com/sibohim" class="app-item project-link">
+                <div class="app-icon">
+                    <img src="https://i.imgur.com/J4A4VUW.png" alt="P2">
+                </div>
+                <span class="app-name">Story Selling</span>
+
+                <div class="info-card">
+                    <h3>Story Selling</h3>
+                    <span class="creator">Created by 채현</span>
+                    <p>이 사이트는 비평가 한병철의 서사의 위기에서 출발한 실험적 웹 아트워크입니다. 자본주의적 스토리텔링이 삶을 상품화하고, 우리를 불안과 공허 속으로 밀어 넣는 과정을 짧은 문장들로 해체해 보여줍니다.
+                       이 공간의 목적은 클릭을 즐기게 하는 것이 아니라, 끝없는 정보 업데이트 속에서 왜 정작 자신의 이야기에 귀 기울이지 못하는지 스스로 질문하게 만드는 데 있습니다.</p>
+                </div>
+            </a>
+
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="https://www.apple.com/v/os/e/images/shared/more/icon_notes__b48ojk6xh7py_large_2x.png" alt="Mail">
+                </div>
+                <span class="app-name">Notes</span>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="https://www.apple.com/v/os/c/images/ios/more/icon_clock__c06enhzvmyie_large_2x.png" alt="Clock">
+                </div>
+                <span class="app-name">Clock</span>
+            </div>
+
+            <a href="https://gaeunl3e.github.io/The_Lost_Story/" class="app-item project-link item-p3" target="_blank">
+                <div class="app-icon">
+                    <img src="https://i.ibb.co/0V9sgGLv/Group-53.png" alt="P3">
+                </div>
+                <span class="app-name">사라진 스토리</span>
+
+                <div class="info-card">
+                    <h3>사라진 스토리</h3>
+                    <span class="creator">Created by 이가은</span>
+                    <p>이 웹 작업은 불친절한 UI와 무의미한 인터랙션을 통해, 서사 없이 소비되고 사라지는 SNS 스토리의 공허함을 사용자가 직접 체감하게 한다.
+                    작동하지 않는 버튼과 휘발되는 이미지·텍스트는 SNS가 서사가 아닌 정보 전시로 변질된 현실을 비판하며, 잃어버린 개인의 이야기를 되묻게 한다.
+                    </p>
+                </div>
+            </a>
+
+            <div class="app-item">
+                <div class="app-icon">
+                    <img src="https://www.apple.com/v/os/e/images/macos/more/icon_facetime__feotyd7la8i2_large_2x.png" alt="Weather">
+                </div>
+                <span class="app-name">FaceTime</span>
+            </div>
+
+        </div> 
+    </div>
+
+    <script>
+        const notiPopup = document.getElementById('notiPopup');
+        const notiIcon = document.getElementById('notiIcon');
+        const notiAppName = document.getElementById('notiAppName');
+        const notiText = document.getElementById('notiText');
+        
+        
+        const randomIds = [
+            "narrative_void", "lost_signal_99", "empty_shell", 
+            "digital_ghost", "no_context_life", "hyper_real_00", 
+            "user_deleted", "unknown_story", "broken_link"
+        ];
+
+        
+        const sources = [
+            {
+                name: "사라진 스토리",
+                icon: "https://i.ibb.co/0V9sgGLv/Group-53.png",
+                msgTemplate: "님이 스토리를 올렸습니다.",
+                link: "https://gaeunl3e.github.io/The_Lost_Story/"
+            },
+            {
+                name: "NO NARRATIVE",
+                icon: "https://i.imgur.com/pnPw7F1.png",
+                msgTemplate: "님이 회원님을 팔로우하기 시작했습니다.",
+                link: "https://save-nova-25861292.figma.site/"
+            },
+            {
+                name: "Story Selling",
+                icon: "https://i.imgur.com/J4A4VUW.png",
+                msgTemplate: "님이 회원님의 게시물을 좋아합니다.",
+                link: "https://output.jsbin.com/sibohim"
+            }
+        ];
+
+        function showNotification() {
+            
+            const randomId = randomIds[Math.floor(Math.random() * randomIds.length)];
+            const randomSource = sources[Math.floor(Math.random() * sources.length)];
+            
+            
+            notiIcon.src = randomSource.icon;
+            notiAppName.innerText = randomSource.name;
+            notiText.innerHTML = `<strong>${randomId}</strong>${randomSource.msgTemplate}`;
+            notiPopup.href = randomSource.link;
+            
+            
+            notiPopup.classList.add('active');
+
+            
+            setTimeout(() => {
+                notiPopup.classList.remove('active');
+            }, 4000);
+        }
+
+        
+        setTimeout(showNotification, 3000);
+
+        
+        setInterval(showNotification, 10000);
+    </script>
+
+</body>
+</html>
